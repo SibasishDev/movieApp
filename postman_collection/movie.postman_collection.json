@@ -1,0 +1,258 @@
+{
+	"info": {
+		"_postman_id": "6043a3a7-8b9c-4168-b9d2-3c1d9af27105",
+		"name": "movie",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28865789"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8088/api/auth/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"dassibasish46@gmail.com\",\r\n    \"name\" : \"Sibasish\",\r\n    \"role\" : 1,\r\n    \"password\" : \"Lucky@123\",\r\n    \"repeatPassword\" : \"Lucky@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8088/api/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8088/api/auth/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"dassibasish46@gmail.com\",\r\n    \"password\" : \"Lucky@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8088/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8088/api/movie/create-movie",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NGJiYWRiMWZlZmEyNDY2NDAxOWJiMyIsImVtYWlsIjoiZGFzc2liYXNpc2g0NkBnbWFpbC5jb20iLCJyb2xlIjoxLCJpYXQiOjE2OTk0NjI0MDIsImV4cCI6MTY5OTQ2NjAwMn0.JUfR2DAfnVs0EtbBbxsOsRwzRLL7p_zFzoH4xxVd-L0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\" : \"Pushpa\",\r\n    \"genre\" : \"Action\",\r\n    \"rating\" : 4.5,\r\n    \"streamingLink\" : \"https://cloud.mongodb.com/v2/62b1ed2e80ca121bc62b5c90#/metrics/replicaSet/653ccffe2dbf8e765889f60d/explorer/test/uuids/find\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8088/api/movie/create-movie",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"api",
+						"movie",
+						"create-movie"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8088/api/movie/get-all-movie",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NGJiYWRiMWZlZmEyNDY2NDAxOWJiMyIsImVtYWlsIjoiZGFzc2liYXNpc2g0NkBnbWFpbC5jb20iLCJyb2xlIjoxLCJpYXQiOjE2OTk0NjI0MDIsImV4cCI6MTY5OTQ2NjAwMn0.JUfR2DAfnVs0EtbBbxsOsRwzRLL7p_zFzoH4xxVd-L0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8088/api/movie/get-all-movie",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"api",
+						"movie",
+						"get-all-movie"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8088/api/movie/search-movie?title=pushpa",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NGJiYWRiMWZlZmEyNDY2NDAxOWJiMyIsImVtYWlsIjoiZGFzc2liYXNpc2g0NkBnbWFpbC5jb20iLCJyb2xlIjoxLCJpYXQiOjE2OTk0NjI0MDIsImV4cCI6MTY5OTQ2NjAwMn0.JUfR2DAfnVs0EtbBbxsOsRwzRLL7p_zFzoH4xxVd-L0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8088/api/movie/search-movie?title=pushpa",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"api",
+						"movie",
+						"search-movie"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "pushpa"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8088/api/movie/update-movie",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NGJiYWRiMWZlZmEyNDY2NDAxOWJiMyIsImVtYWlsIjoiZGFzc2liYXNpc2g0NkBnbWFpbC5jb20iLCJyb2xlIjoxLCJpYXQiOjE2OTk0NjI0MDIsImV4cCI6MTY5OTQ2NjAwMn0.JUfR2DAfnVs0EtbBbxsOsRwzRLL7p_zFzoH4xxVd-L0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"movieId\" : \"654bbd1319071b3b387bbd8b\",\r\n    \"title\" : \"RRR\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8088/api/movie/update-movie",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"api",
+						"movie",
+						"update-movie"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8088/api/movie/delete-movie",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NGJiYWRiMWZlZmEyNDY2NDAxOWJiMyIsImVtYWlsIjoiZGFzc2liYXNpc2g0NkBnbWFpbC5jb20iLCJyb2xlIjoxLCJpYXQiOjE2OTk0NjI0MDIsImV4cCI6MTY5OTQ2NjAwMn0.JUfR2DAfnVs0EtbBbxsOsRwzRLL7p_zFzoH4xxVd-L0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"movieId\" : \"654bbd1319071b3b387bbd8b\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8088/api/movie/delete-movie",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"api",
+						"movie",
+						"delete-movie"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
